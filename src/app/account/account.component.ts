@@ -22,5 +22,6 @@ export class AccountComponent {
     //console.log('A server status changed, new status: ' + status);
     this.accountServie.updateStatus(this.id, status);
     //this.loggingService.logStatusChange(status);
+    this.accountServie.statusUpdated.emit(status);
   }
 }
